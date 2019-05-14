@@ -1,0 +1,354 @@
+
+
+/* 用于所有页面的公共样式，如 头部，尾部，侧边栏的样式，以及子页面的banner图片，整个网站的字体的控制 */
+
+body{
+  box-sizing:border-box;
+  -moz-box-sizing:border-box; /* Firefox */
+  -webkit-box-sizing:border-box; /* Safari */
+  font-family:Tahoma,Arial,”Helvetica Neue“,”Hiragino Sans GB”,"Microsoft YaHei",sans-self;
+
+}
+
+::selection{
+	background-color: transparent;
+	color: #68a8e4;
+}
+/* footer字体图标 这个是共用部分 */
+@font-face {
+	font-family: 'miracle-footer';  /* project id 385219 */
+	src: url('//at.alicdn.com/t/font_385219_o0emytx5hpczncdi.eot');
+	src: url('//at.alicdn.com/t/font_385219_o0emytx5hpczncdi.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_385219_o0emytx5hpczncdi.woff') format('woff'),
+	url('//at.alicdn.com/t/font_385219_o0emytx5hpczncdi.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_385219_o0emytx5hpczncdi.svg#miracle-footer') format('svg');
+}
+.icon-footer{
+  font-family: 'miracle-footer';
+	font-style: normal;
+}
+.clear:after{
+	content: '';
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{
+	transition: all .35s ease-in-out;
+}
+/* 整体框架 */
+.layout{
+	width: 1250px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#progress{
+    position:fixed;
+	height: 2px;
+	background:#b91f1f;
+	transition:opacity 500ms linear;
+	z-index: 999;
+}
+#progress.done{
+    opacity:0
+}
+#progress span{
+	position:absolute;
+	height:2px;
+	-webkit-box-shadow:#b91f1f 1px 0 6px 1px;
+	-webkit-border-radius:100%;
+	opacity:1;
+	width:150px;
+	right:-10px;
+	-webkit-animation:pulse 2s ease-out 0s infinite;
+			}
+@-webkit-keyframes pulse {
+	30% {
+	  opacity:.6
+	}
+	60% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:.6
+	}
+}
+			
+/* header start*/
+.header-wrap{
+	margin-bottom: -3px;
+}
+.brand{
+	width: 322px;
+	height: 50px;
+    margin-right: 45px;
+	padding: 40px 0;
+	padding-bottom: 0;
+	float: left;
+}
+.brand img{
+	width: 100%;
+}
+.nav-list{
+	display: inline-block;
+	font-size: 14px;
+}
+.nav-list>li{
+   margin: 0 22px;
+   float: left;
+}
+.nav-list>li>a{
+	padding: 52px 22px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.nav-list>li>a:hover,.active{
+	background-color: #095caa;
+	color: #fff;
+}
+.nav-list>li h6{
+	font-size: 16px;
+	color: #1769f3;
+	margin-bottom: 10px;
+}
+.nav-list>li .dropdown-menu{
+	position: absolute;
+	z-index: 1000;
+	text-align: left;
+	background-color: #fff;
+	font-size: 14px;
+	padding: 0 15px;
+	left: 50%;
+	margin-left: -603px;
+	border-top: 4px solid #095caa;
+	display: none;
+    /* -moz-box-shadow: 1px 2px 6px #095caa;
+    -webkit-box-shadow: 1px 2px 6px #095caa;
+    box-shadow: 1px 2px 6px #095caa;
+ */
+
+  -moz-box-shadow: 1px 2px 6px #313131;
+    -webkit-box-shadow: 1px 2px 6px #313131;
+    box-shadow: 1px 2px 6px #313131;
+
+
+
+
+
+} 
+.nav-list>li .dropdown-menu>li{
+	padding: 25px 0 20px;
+}
+.nav-list>li .dropdown-menu>li a:hover{
+	color: #1960d6;
+}
+
+.nav-list>li .dropdown-menu .content-menu{
+	width: 16.66%;
+	float: left;
+	padding: 0 20px;
+	border-right: solid 1px #f0f0f0;
+}
+.nav-list>li .content-menu .content li{
+	width: 155px;
+	padding: 5px 0;
+}
+.nav-list>li .dropdown-menu .item-6{
+	border-right: none;
+}
+.nav-list>li .dropdown-icon{
+	display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width:  8px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    margin-left: 5px;
+}
+span.dropdown-icon-hover{
+	border-color: #fff transparent transparent transparent !important;
+}
+.icon-header{
+	font-size: 25px;
+}
+header .number-wrap{
+	color: #095caa;
+	float: right;
+	padding: 47px 0;
+	letter-spacing: 1px;
+}
+header .icon-header{
+	display: inline-block;
+    vertical-align: middle;
+	padding-right: 5px;
+}
+header .icon-header>span{
+   display: inline-block;
+   vertical-align: middle;
+}
+/* header end */
+
+
+/* footer start*/
+footer{
+	background-color: #656565;
+	padding-top: 55px;
+    color: #b2b2b2;
+	font-size: 14px;
+}
+footer .con-wrap{
+    margin-bottom: 35px;
+}
+footer .list-lift:first-child{
+    margin-left: 0px;
+}
+footer .list-lift{
+	margin-top: -22px;
+	margin-left: 125px;
+	float: left;
+}
+footer .list-lift a{
+    color: #b2b2b2;
+}
+footer .list-lift a:hover{
+    color: #fff;
+}
+footer .list-lift>li{
+	margin-top: 22px;
+}
+footer .item-tit{
+	font-size: 16px;
+	color: #e8e8e8;
+}
+
+footer .qr-wrap{
+    text-align: center;
+    font-size: 12px;
+    float: left;
+    padding: 0 75px;
+    margin-left: 100px;
+    border-left: 1px solid #797979;
+    border-right: 1px solid #797979;
+}
+footer .qr-wrap>span{
+	display: block;
+	padding-top: 10px;
+}
+
+footer .list-right{
+	 float: right;
+	 margin-top: -32px;
+	 padding-left: 85px;
+}
+footer .list-right>li{
+    margin-top: 32px;
+}
+footer .list-right i{
+    font-style: inherit;
+    font-size: 22px;
+    vertical-align: middle;
+}
+.copyright{
+	border-top: 1px solid #797979;
+	text-align: center;
+	padding: 30px 0;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.case-number{
+	padding-left: 10px;
+	color: #fff;
+}
+.case-number:hover{
+	color: #5FBAFD;
+}
+
+/* footer end*/
+
+
+/*tools-bar*/
+
+.tools-bar{
+	width: 35px;
+	position: fixed;
+	right: 10px;
+	bottom: 20px;
+	z-index: 999;
+}
+.go-top{
+	height: 35px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #1786ef;
+	text-align: center;
+}
+.icon-up{
+	display: inline-block;
+	margin-top: 13px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width:0 7.5px 8px 7.5px;;
+	border-color: transparent transparent #fff transparent;
+}
+
+
+/* section-7  footer-bar 开始*/
+.miracle-footer{
+	font-family: 'miracle-footer';
+	font-style: normal;
+}
+
+.section-7{
+	text-align: center;
+}
+.footer-bar{
+	margin: 80px 0;
+	display: inline-block;
+}
+.footer-bar>li{
+	float: left;
+	margin-left: 55px;
+}
+.footer-bar>li:first-child{
+	margin-left: 0;
+}
+.footer-bar .bar-icon{
+	float: left;
+	font-size: 50px;
+	color: #2b72b6;
+	padding: 15px;
+	border: 2px solid #2b72b6;
+	border-radius: 50%;
+}
+
+.bar-text{
+	float: left;
+	margin-left: 10px;
+	margin-top: 21px;
+}
+
+
+.footer-bar .bar-tit{
+	font-size: 18px;
+	text-align: left;
+
+}
+
+.footer-bar .bar-desc{
+	color: #777;
+	font-size: 14px;
+}
+
+
+/*footer-bar 结束*/
+
+
+
+
